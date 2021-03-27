@@ -403,8 +403,10 @@ def apply_script(protocol, connection, config):
                         return connection.on_block_build(self, a, b, c)
                     else:
                         STORED_COLORS[p2] = color
+                        preProcNumber = len(VOXEL_PROC_GLOW)
                         glownupon_block_user(a, b, c, 7, 5, map, color)
-                        countType =1
+                        postProcNumber = len(VOXEL_PROC_GLOW)
+                        countType = postProcNumber - preProcNumber
                         trigger(protocol, map, countType)
 
                         return connection.on_block_build(self, a, b, c)
