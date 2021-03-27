@@ -2,7 +2,7 @@
 A point light system for Piqueserver
 
 ## How does it work?
-Glow interprets user-placed blocks with an R, G or B value of 255 as a "light block". Said blocks dynamically apply its color to surrounding blocks in a point-light fashion.
+Glow interprets user-placed blocks with an R, G or B value of 255 as a "light block". Said blocks dynamically apply its color to surrounding blocks in a point-light fashion. It makes player builds a lot prettier!
 
 ## How do I run it?
 Glow shares some file architecture with imger, so folders at the root of your piqueserver installation need to be created (for the DISABLED_USERS_GLOW.txt file). Said file is located in "img/userdata/DISABLED_USERS_GLOW.txt".
