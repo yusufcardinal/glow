@@ -13,8 +13,11 @@ The script is also disabled by default on non-glow maps. That can be changed in 
 If ALWAYS_GLOW is turned OFF, these extensions will need to be added to the map's .txt file:
 
 `extensions = {
+
     'glow_enabled': True,
+    
     'glow_stored_colors': {}
+    
 }`
 
 A good candidate for a glow map is a map with no RGB values of 255 all across. If your map doesn't meet that requirement, it can be easily edited with the use of "glowpp.py" (glow pre-process). This script will edit map colors on a server boot so that every block's color values get clamped. Also useful if you wish to grade the whole map at once (turn it to night, for example). It is then simply a matter of saving the map to a new .vxl file, and use that one instead. (Make sure you don't run your server with glowpp running at all time; this will make map loading between matches horribly long (and break glow functionality if there are glow blocks on the map).
