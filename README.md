@@ -12,7 +12,8 @@ The script is also disabled by default on non-glow maps. That can be changed in 
 ## How do I make a "glow map"?
 If ALWAYS_GLOW is turned OFF, these extensions will need to be added to the map's .txt file:
 
-```extensions = {
+```
+extensions = {
     'glow_enabled': True,
     'glow_stored_colors': {}
 }
