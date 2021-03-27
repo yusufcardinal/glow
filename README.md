@@ -7,7 +7,7 @@ Glow interprets user-placed blocks with an R, G or B value of 255 as a "light bl
 ## How do I run it?
 Glow shares some file architecture with imger, so folders at the root of your piqueserver installation need to be created (for the DISABLED_USERS_GLOW.txt file). Said file is located in "img/userdata/DISABLED_USERS_GLOW.txt".
 
-The script is also disabled by default on non-glow maps. That can be changed in the script by changing "ALWAYS_GLOW" in the user inputs to "True".
+The script is also disabled by default on non-glow maps. That can be changed in the script by changing "ALWAYS_GLOW" in the user inputs to "True". (There may be some behavior unaccounted for when ALWAYS_GLOW is ON, use at your own risks!)
 
 ## How do I make a "glow map"?
 If ALWAYS_GLOW is turned OFF, these extensions will need to be added to the map's .txt file:
