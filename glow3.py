@@ -159,9 +159,12 @@ def glow_block_user(protocol, a, b, c, value, tolerance, map):
         distance = math.sqrt((p[0] - a) ** 2 + (p[1] - b) ** 2 + (p[2] - c) ** 2)
         if distance > value:
             continue
-        if R2 == 0 and G2 == 0 and B2 == 0:
+        if not map.is_surface(p[0], p[1], p[2]):
             continue
         else:
+            # Client-side dirt color (Assumedly OpenSpades)
+            if R2 == 0 and G2 == 0 and B2 == 0:
+                R2, G2, B2 = (103, 64, 40)
             if p not in STORED_COLORS:
                 STORED_COLORS[p] = tuple((R2, G2, B2))
             value = float(value)
@@ -217,9 +220,12 @@ def unglow_block_user(protocol, a, b, c, value, tolerance, map):
         distance = math.sqrt((p[0] - a) ** 2 + (p[1] - b) ** 2 + (p[2] - c) ** 2)
         if distance > value:
             continue
-        if R2 == 0 and G2 == 0 and B2 == 0:
+        if not map.is_surface(p[0], p[1], p[2]):
             continue
         else:
+            # Client-side dirt color (Assumedly OpenSpades)
+            if R2 == 0 and G2 == 0 and B2 == 0:
+                R2, G2, B2 = (103, 64, 40)
             value = float(value)
             R1, G1, B1, R2, G2, B2 = float(R1), float(G1), float(B1), float(R2), float(G2), float(B2)
             if p in VOXEL_PROC_GLOW:
